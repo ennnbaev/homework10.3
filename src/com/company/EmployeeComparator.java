@@ -13,8 +13,14 @@ public class EmployeeComparator implements Comparator<Employee> {
                 return o1.lastName.compareTo(o2.lastName);
             }
         }
+        else if(o1.salary- o2.salary<=0.5&&o1.salary- o2.salary>0){
+            return 1;
+        }
+        else if(o1.salary- o2.salary>=-0.5&&o1.salary- o2.salary<0){
+            return -1;
+        }
         else {
-            return o1.salary-o2.salary;
+            return (int)(o1.salary- o2.salary);
         }
     }
 }
